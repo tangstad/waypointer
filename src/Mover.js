@@ -2,21 +2,22 @@ var Mover = function() {
 	this.locationX = 0;
 	this.locationY = 0;
 
-	var waypointX = 0;
-	var waypointY = 0;
-	var steps;
+	var waypoint;
 
 	this.tick = function() {
-		if (waypointX != 0) {
-			this.locationX = (waypointX / steps);
-			this.locationY = (waypointY / steps);
+		if (waypoint) {
+			this.locationX += (waypoint.x / waypoint.steps);
+			this.locationY += (waypoint.y / waypoint.steps);
 		}
 	};
 
-	this.addWaypoint = function(x,y,s) {
-		waypointX = x;
-		waypointY = y;
-		steps = s;
+	this.addWaypoint = function(x,y,steps) {
+
+		waypoint = {
+			x:x,
+			y:y,
+			steps:steps,
+		};
 	};
 };
 

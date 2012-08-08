@@ -52,5 +52,16 @@ describe("Mover", function() {
 		expect(mover.locationX).toEqual(5);
 		expect(mover.locationY).toEqual(5);
 	});
+
+	it("can move two steps towards waypoint", function() {
+		var mover = new Mover();
+
+		mover.addWaypoint(10,10,2);
+		mover.tick();
+		mover.tick();
+
+		expect(mover.locationX).toEqual(10);
+		expect(mover.locationY).toEqual(10);
+	});
 });
 
