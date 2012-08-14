@@ -1,0 +1,12 @@
+TODO
+* Add parameter to tick
+* Combine locationX and locationY to position
+* Add shuttle
+* Add multiple waypoints
+
+
+DONE
+* refactor test spec, mover initialization only once 
+* Check that we stop at waypoint even with multiple ticks
+* Add waypoint looping (loop, stop)
+
