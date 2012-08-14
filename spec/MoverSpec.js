@@ -66,5 +66,28 @@ describe("Mover", function() {
 		expect(mover.locationX).toEqual(10);
 		expect(mover.locationY).toEqual(10);
 	});
+
+	it("can loop to start after reaching waypoint", function() {
+		mover.addWaypoint(10,10,2);
+		mover.setLoopAfterWaypoint();
+		mover.tick();
+		mover.tick();
+		mover.tick();
+
+		expect(mover.locationX).toEqual(0);
+		expect(mover.locationY).toEqual(0);
+	});
+
+	it("can loop beyond start after reaching waypoint", function() {
+		mover.addWaypoint(10,10,2);
+		mover.setLoopAfterWaypoint();
+		mover.tick();
+		mover.tick();
+		mover.tick();
+		mover.tick();
+
+		expect(mover.locationX).toEqual(5);
+		expect(mover.locationY).toEqual(5);
+	});
 });
 
