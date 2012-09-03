@@ -31,5 +31,10 @@ var Mover = function() {
 	this.setLoopAfterWaypoint = function() {
 		this.looping = true;
 	};
+
+	this.setStartPosition = function(x, y) {
+		this.locationX = x;
+		this.locationY = y;
+	};
 };
 

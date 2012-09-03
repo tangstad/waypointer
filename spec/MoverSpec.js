@@ -89,5 +89,12 @@ describe("Mover", function() {
 		expect(mover.locationX).toEqual(5);
 		expect(mover.locationY).toEqual(5);
 	});
+
+	it("can have an initial position other than 0,0", function() {
+		mover.setStartPosition(5,6);
+
+		expect(mover.locationX).toEqual(5);
+		expect(mover.locationY).toEqual(6);
+	});
 });
 
