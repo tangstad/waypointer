@@ -96,5 +96,9 @@ describe("Mover", function() {
 		expect(mover.locationX).toEqual(5);
 		expect(mover.locationY).toEqual(6);
 	});
+
+	xit("Combine locationX and locationY to position");
+	xit("Add shuttle");
+	xit("Add multiple waypoints");
 });
 
